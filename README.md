@@ -2,4 +2,4 @@
 
 My redirect page.
 
-access: [page](Jonta-Sancar.github.io/page/).
+access by clicking [here](https://jonta-sancar.github.io/page/).
