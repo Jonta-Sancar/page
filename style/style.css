@@ -58,37 +58,20 @@ a:hover{
 
 #skills{
     margin-top: 10px;
+    padding: 10px;
     background-color: #072BA8aa;
 
-    display: none;
-
-    height: 0px;
+    height: auto;
 
     list-style-position: inside;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    text-align: left;
 
     border: 1px solid #A87A00;
     border-radius: 5px;
     box-shadow: 0 8px 10px #000E42;
 }
 
-/* #html{
-    list-style-image: url(../assets/html.png);
+.skills-items{
+    list-style-type: disc;
 }
-#css{
-    list-style-image: url(../assets/css.png);
-}
-#js{
-    list-style-image: url(../assets/js.png);
-}
-#jq{
-    list-style-image: url(../assets/jq.png);
-}
-#bt{
-    list-style-image: url(../assets/bt.png);
-}
-#fb{
-    list-style-image: url(../assets/fb.png);
-} */

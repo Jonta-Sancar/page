@@ -1,4 +1,6 @@
 var hideInterval;
+let boardSkills_height = 0;
+
 const active = {
     remove(e, d) {
 
@@ -22,7 +24,7 @@ const displayControl = {
 
         hideInterval = setInterval(() => {
 
-            if (height <= 220) {
+            if (height <= boardSkills_height) {
 
                 d.style.height = height + 'px';
                 height++;
@@ -40,7 +42,7 @@ const displayControl = {
     },
     hide(d) {
 
-        let height = 220;
+        let height = boardSkills_height;
         let padding = 10;
 
         hideInterval = setInterval(() => {
@@ -80,3 +82,12 @@ function toActive(e) {
         active.add(e, display)
     }
 }
+
+function removeSkills(){
+    const boardSkills = document.querySelector('#skills');
+
+    boardSkills_height = boardSkills.clientHeight;
+
+    boardSkills.style.display = 'none';
+}
+removeSkills();
