@@ -10,7 +10,7 @@ body{
     text-align: center;
     height: 100vh;
 
-    background-image: linear-gradient(0deg, #000E42, #072BA8);
+    background-image: linear-gradient(0deg, #0d173f, #213da1);
     background-repeat: no-repeat;
 
     color: #F5BB1B;
@@ -59,7 +59,7 @@ a:hover{
 #skills{
     margin-top: 10px;
     padding: 10px;
-    background-color: #072BA8aa;
+    background-color: #213da155;
 
     height: auto;
 
@@ -70,6 +70,12 @@ a:hover{
     border: 1px solid #A87A00;
     border-radius: 5px;
     box-shadow: 0 8px 10px #000E42;
+}
+#skills ul{
+
+    list-style-position: inside;
+    flex-direction: column;
+    text-align: left;
 }
 
 .skills-items{

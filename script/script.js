@@ -19,6 +19,8 @@ const active = {
 }
 const displayControl = {
     show(d) {
+        clearInterval(hideInterval);
+
         let height = 0;
         let padding = 0;
 
@@ -41,6 +43,7 @@ const displayControl = {
         }, 0.1)
     },
     hide(d) {
+        clearInterval(hideInterval);
 
         let height = boardSkills_height;
         let padding = 10;
