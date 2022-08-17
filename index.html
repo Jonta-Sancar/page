@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
 
@@ -24,21 +24,23 @@
     
         <ul id="redirectList">
             <li><a class="redirect" href="#skills" target="_self" onclick="toActive(this)">Skills</a></li>
+
+            <li><a class="redirect" href="#projects" target="_self" onclick="toActive(this)">Projects</a></li>
     
             <li><a class="redirect" href="https://www.linkedin.com/in/jonta-sancar/" target="_blank" onclick="toActive(this)">Linkedin</a></li>
     
             <li><a class="redirect" href="https://github.com/Jonta-Sancar" target="_blank" onclick="toActive(this)">Github</a></li>
         </ul>
     
-        <ul id="skills">
+        <ul class="dropdown" id="skills">
             <li>
                 <h3>Language</h3>
 
                 <ul>
 
-                    <li class="skills-items">HTML</li>
-                    <li class="skills-items">CSS</li>
-                    <li class="skills-items">JavaScript</li>
+                    <li class="drop-items">HTML</li>
+                    <li class="drop-items">CSS</li>
+                    <li class="drop-items">JavaScript</li>
                 </ul>
 
             </li>
@@ -47,9 +49,37 @@
 
                 <ul>
 
-                    <li class="skills-items">jQuery</li>
-                    <li class="skills-items">Bootstrap</li>
-                    <li class="skills-items">Firebase</li>
+                    <li class="drop-items">jQuery</li>
+                    <li class="drop-items">Bootstrap</li>
+                    <li class="drop-items">Firebase</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="dropdown" id="projects">
+            <li>
+                <h3>Front</h3>
+
+                <ul>
+                    <li class="drop-items"><a href="#" target="_self">This page</a></li>
+
+                    <li class="drop-items"><a href="https://jonta-sancar.github.io/leading-page-model/" target="_blank">Leading page - model</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>Back</h3>
+
+                <ul>
+                    <li class="drop-items">Soon</li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>Full</h3>
+
+                <ul>
+                    <li class="drop-items">Soon</li>
                 </ul>
             </li>
         </ul>

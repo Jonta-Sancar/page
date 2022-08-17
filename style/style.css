@@ -56,7 +56,7 @@ a:hover{
     color: #A87A00;
 }
 
-#skills{
+.dropdown{
     margin-top: 10px;
     padding: 10px;
     background-color: #213da155;
@@ -71,13 +71,13 @@ a:hover{
     border-radius: 5px;
     box-shadow: 0 8px 10px #000E42;
 }
-#skills ul{
+.dropdown ul{
 
     list-style-position: inside;
     flex-direction: column;
     text-align: left;
 }
 
-.skills-items{
+.drop-items{
     list-style-type: disc;
 }

@@ -86,11 +86,15 @@ function toActive(e) {
     }
 }
 
-function removeSkills(){
-    const boardSkills = document.querySelector('#skills');
+function removeDropdown(){
+    const dropdown = document.querySelectorAll('.dropdown');
 
-    boardSkills_height = boardSkills.clientHeight;
+    dropdown.forEach(element => {
+        
+        board_height = element.clientHeight;
+    
+        element.style.display = 'none';
+    });
 
-    boardSkills.style.display = 'none';
 }
-removeSkills();
+removeDropdown();
