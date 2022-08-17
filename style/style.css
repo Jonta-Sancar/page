@@ -30,6 +30,8 @@ body{
     color: #A87A00;
 }
 
+
+
 ul{
     padding-top: 30px;
     list-style: none;
@@ -44,6 +46,11 @@ ul .active{
     padding: 4px;
     color:#F5BB1B;
     border: 1px solid #fff;
+}
+
+#redirectList{
+    flex-direction: column;
+    gap: 0px;
 }
 
 a{

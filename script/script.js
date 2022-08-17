@@ -1,5 +1,9 @@
 var hideInterval;
-let boardSkills_height = 0;
+let board_active = {
+    e:null,
+    d:null
+};
+let board_height = 0;
 
 const active = {
     remove(e, d) {
@@ -26,7 +30,7 @@ const displayControl = {
 
         hideInterval = setInterval(() => {
 
-            if (height <= boardSkills_height) {
+            if (height <= board_height) {
 
                 d.style.height = height + 'px';
                 height++;
@@ -45,7 +49,7 @@ const displayControl = {
     hide(d) {
         clearInterval(hideInterval);
 
-        let height = boardSkills_height;
+        let height = board_height;
         let padding = 10;
 
         hideInterval = setInterval(() => {
@@ -71,30 +75,52 @@ const displayControl = {
 
 function toActive(e) {
 
-    let beActive = e.classList[1];
-
     let displayId = e.getAttribute('href');
     let display = document.querySelector(displayId);
 
-    if (beActive) {
+    if(display == board_active.d){
+        console.log('igual')
 
         active.remove(e, display)
+        board_active.e = null;
+        board_active.d = null;
+        console.log(board_active.e, board_active.d)
     }
-    else {
+    else{
+        console.log('não igual')
 
-        active.add(e, display)
+        if(board_active.e != e && board_active.e != null){
+
+            active.remove(board_active.e, board_active.d)
+
+            setTimeout(() => {
+
+                active.add(e, display)
+                board_active.e = e;
+                board_active.d = display;
+            }, 2000);
+        }
+        else{
+
+            active.add(e, display)
+            board_active.e = e;
+            board_active.d = display;
+            console.log(board_active.e, board_active.d)
+        }
+
     }
 }
 
-function removeDropdown(){
+window.onload = function(){
     const dropdown = document.querySelectorAll('.dropdown');
 
     dropdown.forEach(element => {
         
         board_height = element.clientHeight;
     
+        element.style.height = '0px';
+        element.style.padding = '0px';
         element.style.display = 'none';
     });
 
 }
-removeDropdown();
