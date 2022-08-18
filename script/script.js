@@ -4,13 +4,15 @@ let board_active = {
     d:null
 };
 let board_height = 0;
+let change_height_time = 3;
 
 const active = {
-    remove(e, d) {
+    remove(e, d, callback) {
 
         e.classList.remove('active');
 
-        displayControl.hide(d);
+        displayControl.hide(d, callback);
+
     },
     add(e, d) {
 
@@ -33,7 +35,7 @@ const displayControl = {
             if (height <= board_height) {
 
                 d.style.height = height + 'px';
-                height++;
+                height+=change_height_time;
             }
             else {
 
@@ -42,11 +44,11 @@ const displayControl = {
             if (padding <= 10) {
 
                 d.style.padding = padding + 'px';
-                padding++;
+                padding+=change_height_time;
             }
         }, 0.1)
     },
-    hide(d) {
+    hide(d, callback) {
         clearInterval(hideInterval);
 
         let height = board_height;
@@ -57,17 +59,21 @@ const displayControl = {
             if (height >= 0) {
 
                 d.style.height = height + 'px';
-                height--;
+                height-=change_height_time;
             }
             else {
 
                 d.style.display = 'none';
                 clearInterval(hideInterval);
+
+                if (callback) {
+                    callback();
+                }
             }
             if (padding >= 0) {
 
                 d.style.padding = padding + 'px';
-                padding--;
+                padding-=change_height_time;
             }
         }, 0.1)
     }
@@ -79,33 +85,27 @@ function toActive(e) {
     let display = document.querySelector(displayId);
 
     if(display == board_active.d){
-        console.log('igual')
 
         active.remove(e, display)
         board_active.e = null;
         board_active.d = null;
-        console.log(board_active.e, board_active.d)
     }
     else{
-        console.log('não igual')
 
         if(board_active.e != e && board_active.e != null){
 
-            active.remove(board_active.e, board_active.d)
-
-            setTimeout(() => {
+            active.remove(board_active.e, board_active.d, ()=>{
 
                 active.add(e, display)
                 board_active.e = e;
                 board_active.d = display;
-            }, 2000);
+            });
         }
         else{
 
             active.add(e, display)
             board_active.e = e;
             board_active.d = display;
-            console.log(board_active.e, board_active.d)
         }
 
     }
