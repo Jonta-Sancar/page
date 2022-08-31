@@ -21,6 +21,8 @@ const active = {
         d.style.display = 'flex';
 
         displayControl.show(d);
+
+        board_height = d.dataset.size;
     }
 }
 const displayControl = {
@@ -115,8 +117,7 @@ window.onload = function(){
     const dropdown = document.querySelectorAll('.dropdown');
 
     dropdown.forEach(element => {
-        
-        board_height = element.clientHeight;
+        element.dataset.size = element.clientHeight;
     
         element.style.height = '0px';
         element.style.padding = '0px';
