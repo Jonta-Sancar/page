@@ -17,6 +17,11 @@ body{
     text-shadow: 0 1px 5px #000a;
 }
 
+h1{
+    
+  font-family: 'Great Vibes', serif;
+}
+
 .container{
     margin: 0 auto;
     padding-top: 100px;
