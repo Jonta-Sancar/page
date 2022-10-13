@@ -1,0 +1,23 @@
+{
+  "name": "page",
+  "version": "1.0.0",
+  "description": "My redirect page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonta-Sancar/page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonta-Sancar/page/issues"
+  },
+  "homepage": "https://github.com/Jonta-Sancar/page#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}

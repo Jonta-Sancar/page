@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+
+    background-image: linear-gradient(0deg, #0d173f, #213da1);
+    background-repeat: no-repeat;
+
+    color: #F5BB1B;
+    font-family: Courier, monospace;
+    text-shadow: 0 1px 5px #000a;
+}
+
+header{
+    background: linear-gradient(to left bottom, #213da1, #000E42);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
+    box-shadow: 0px 5px 10px #0008;
+}
+
+header img{
+    width: 80px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#nav-ul a{
+    border: 1px solid #0000;
+}
+#nav-ul .active{
+    border: none;
+    border-bottom: 1px solid;
+}
+
+#burger, #burger-active{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+}
+
+#barr, #barr::after, #barr::before{
+    position: relative;
+    background-color: #F5BB1B;
+    width: 100%;
+    height: 5px;
+
+    transition: .3s;
+}
+
+#barr::after, #barr::before{
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+#barr::before{
+    top: 10px;
+}
+
+#barr::after{
+    top: -10px;
+}
+
+#burger-active #barr{
+    transform: rotate(135deg);
+}
+
+#burger-active #barr::after{
+    top: 0;
+    opacity: 0;
+}
+
+#burger-active #barr::before{
+    top: 0;
+    transform: rotate(-270deg);
+}
+
+a{
+    padding: 5px;
+    text-decoration: none;
+    color: #F5C236;
+}
+a:hover{
+
+    color: #A87A00;
+}
+
+main{
+    padding: 30px 10px;
+}
+
+#home .content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+
+    text-align: justify;
+    text-indent: 50px;
+}
+
+h1 strong{
+    font-size: 1.5em;
+    font-family: 'Great Vibes', serif;
+}
+
+#signature{
+    width: 30vw;
+}
+
+#skills{
+    padding: 20px 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    border-top: 1px solid;
+}
+
+.skill{
+    background-color: #000E42;
+    padding: 20px;
+    width: 150px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.skill img{
+    width: 80%;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects-list{
+    list-style: none;
+    padding-top: 30px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.project{
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+
+    width: 450px;
+}
+.project img{
+    width: 100%;
+}
+.project div{
+    padding-top: 10px;
+    color: #000;
+    text-shadow: none;
+    text-align: left;
+}
+
+.project a{
+    color: #00f;
+    text-decoration: underline;
+}
+.project a:hover{
+    color: #008;
+}
+
+
+@media (max-width: 600px) {
+    #nav-ul{
+        background-image: linear-gradient(to bottom,#213da1, #000E42);
+
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    #burger, #burger-active{
+        display: flex;
+    }
+}
