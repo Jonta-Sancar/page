@@ -48,3 +48,10 @@ function toggleMenu(e) {
         nav_ul.style.display = 'none';
     }
 }
+
+function redirect(e){
+  const lang = e.value;
+
+
+  window.location.replace(`/${lang}`);
+}

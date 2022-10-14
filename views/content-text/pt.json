@@ -1,0 +1,30 @@
+{
+  "title": "Jonta Sancar - Desenvolvedor web brasileiro",
+
+  "links":[
+      "Início",
+      "Projetos",
+      "Linkedin",
+      "Github"
+  ],
+  "h1":[
+      "Olá pode me chamar de ",
+      "ou só "
+  ],
+  "p_slogam": "Desenvolvedor web full stack, brasileiro, utilizando: no front - html, css, javascript; no back - node (em breve novo item).",
+  "projects":{
+      "title":"Projetos",
+      "links":[
+          "descrição",
+          "acessar"
+      ],
+      "front":[
+          "Página principal / de captura",
+          "Sortê e os - num"
+      ],
+      "back":[],
+      "full":[
+          "SORTÊ E OS"
+      ]
+  }
+}

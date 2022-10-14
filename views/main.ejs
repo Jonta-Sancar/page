@@ -14,45 +14,170 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="shortcut icon" href="/assets/icon.svg" type="image/x-icon">
 
-    <% if(lang == 'pt'){%>
-
-        <%- include('partials/pt/title')%>
-    <%}else{%>
-        
-        <%- include('partials/en/title')%>
-    <%}%>
+    <title><%=title%></title>
 
 </head>
 
 <body>
 
 
-    <% if(lang == 'pt'){%>
+    <header>
+  
+        <img src="/assets/signature.svg" alt="Jonta-Sancar">
+      
+        <nav>
 
-        <%- include('partials/pt/header')%>
-    <%}else{%>
+            <select name="lang" id="lang-select"  oninput="redirect(this)">
+                <option selected disabled>lang</option>
+                <option id="pt" value="pt">pt-br</option>
+                <option id="en" value="en">en</option>
+            </select>
+      
+          <button id="burger" onclick="toggleMenu(this)">
+            <span id="barr"></span>
+          </button>
+      
+          <ul id="nav-ul">
+      
+            <li><a class="redirect active" href="/" target="_self" onclick="toActive(this)"><%=links[0]%></a></li>
+      
+            <li><a class="redirect" href="#projects" target="_self" onclick="toActive(this)"><%=links[1]%></a></li>
+              
+            <li><a class="redirect" href="https://www.linkedin.com/in/jonta-sancar/" target="_blank" onclick="toActive(this)"><%=links[2]%></a></li>
+      
+            <li><a class="redirect" href="https://github.com/Jonta-Sancar" target="_blank" onclick="toActive(this)"><%=links[3]%></a></li>
+      
+          </ul>
+        </nav>
+      
+      </header>
+
+
+      <main>
+        <section id="home">
+          
+          <div class="content">
+      
+            <div id="slogam">
+      
+              <h1><%=h1[0]%><strong>Jonta Sancar</strong>, <%=h1[1]%><strong>Jonta</strong>.</h1>
+      
+              <br>
+              <br>
+      
+              <p><%=p_slogam%></p>
+      
+            </div>
+      
+            <img id="signature" src="/assets/signature.svg" alt="Jonta-Sancar">
+      
+          </div>
+      
+          <div id="skills">
+            
+            <div class="skill">
+      
+              <img src="/assets/skills/html.svg" alt="html5">
+      
+              <h3>HTML5</h3>
+            </div>
+      
+            <div class="skill">
+      
+              <img src="/assets/skills/css.svg" alt="css3">
+      
+              <h3>CSS3</h3>
+            </div>
+      
+            <div class="skill">
+      
+              <img src="/assets/skills/js.svg" alt="javascript">
+      
+              <h3>JS</h3>
+            </div>
+      
+            <div class="skill">
+      
+              <img src="/assets/skills/node.svg" alt="nodejs">
+      
+              <h3>NODE-JS</h3>
+            </div>
+          </div>
+      
+        </section>
+      
+        <section id="projects">
+      
+          <h2><%=projects.title%></h2>
+            
+          <ul>
+      
+            <li href="#front">
+              <h4>Front</h4>
         
-        <%- include('partials/en/header')%>
-    <%}%>
-
-
-    <% if(lang == 'pt'){%>
-
-        <%- include('partials/pt/body')%>
-    <%}else{%>
+              <ul class="projects-list">
+                
+                <li class="project">
+                  <img src="/assets/projects/leading-page.png" alt="img">
         
-        <%- include('partials/en/body')%>
-    <%}%>
-
-
-    <% if(lang == 'pt'){%>
-
-        <%- include('partials/pt/footer')%>
-    <%}else{%>
+                  <div>
+                    <h4><%=projects.front[0]%></h4>
+                    
+                    <br>
         
-        <%- include('partials/en/footer')%>
-    <%}%>
-
+                    <a href="#"><%=projects.links[0]%></a>
+        
+                    <a href="https://jonta-sancar.github.io/leading-page-model/" target="_blank"><%=projects.links[1]%></a>
+                  </div>
+                </li>
+        
+                <li class="project">
+                  <img src="/assets/projects/sorte-e-os-nums.png" alt="img">
+        
+                  <div>
+                    <h4><%=projects.front[1]%></h4>
+                    
+                    <br>
+        
+                    <a href="#"><%=projects.links[0]%></a>
+        
+                    <a href="https://jonta-sancar.github.io/sorte-e-os" target="_blank"><%=projects.links[1]%></a>
+                  </div>
+                </li>
+        
+              </ul>
+            </li>
+        
+            <li href="#back">Back</li>
+        
+            <li href="#full">
+              
+              <h4>Full</h4>
+              
+              <ul class="projects-list">
+        
+              <li class="project">
+                  <img src="/assets/projects/ALEATORIZE.png" alt="img">
+        
+                  <div>
+                    <h4><%=projects.full[0]%></h4>
+                    
+                    <br>
+        
+                    <a href="#"><%=projects.links[0]%></a>
+        
+                    <a href="https://sorteios.vercel.app" target="_blank"><%=projects.links[1]%></a>
+                  </div>
+                </li>
+        
+              </ul>
+            </li>
+      
+          </ul>
+      
+        </section>
+      </main>
+      
     <script src="/script/script.js"></script>
 </body>
 

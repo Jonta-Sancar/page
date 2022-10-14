@@ -1,0 +1,30 @@
+{
+  "title": "Jonta Sancar - Brazillian web developer",
+
+  "links":[
+      "Home",
+      "Projects",
+      "Linkedin",
+      "Github"
+  ],
+  "h1":[
+      "Hello, you can call me ",
+      "or just "
+  ],
+  "p_slogam": "Web developer full stack, Brazillian, I use: front - html, css, javascript; back - node (soon new item).",
+  "projects":{
+      "title":"Projects",
+      "links":[
+          "description",
+          "access"
+      ],
+      "front":[
+          "Leading page",
+          "Sweepstake page - numbers"
+      ],
+      "back":[],
+      "full":[
+          "full-stack Sweepstake page"
+      ]
+  }
+}
