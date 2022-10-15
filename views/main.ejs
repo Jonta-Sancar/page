@@ -29,8 +29,8 @@
 
             <select name="lang" id="lang-select"  oninput="redirect(this)">
                 <option selected disabled>lang</option>
-                <option id="pt" value="pt">pt-br</option>
-                <option id="en" value="en">en</option>
+                <option id="pt" value="pt">Português</option>
+                <option id="en" value="en">English</option>
             </select>
       
           <button id="burger" onclick="toggleMenu(this)">
@@ -50,133 +50,133 @@
           </ul>
         </nav>
       
-      </header>
+    </header>
 
 
-      <main>
-        <section id="home">
+    <main>
+      <section id="home">
+        
+        <div class="content">
+    
+          <div id="slogam">
+    
+            <h1><%=h1[0]%><strong>Jonta Sancar</strong>, <%=h1[1]%><strong>Jonta</strong>.</h1>
+    
+            <br>
+            <br>
+    
+            <p><%=p_slogam%></p>
+    
+          </div>
+    
+          <img id="signature" src="/assets/signature.svg" alt="Jonta-Sancar">
+    
+        </div>
+    
+        <div id="skills">
           
-          <div class="content">
-      
-            <div id="slogam">
-      
-              <h1><%=h1[0]%><strong>Jonta Sancar</strong>, <%=h1[1]%><strong>Jonta</strong>.</h1>
-      
-              <br>
-              <br>
-      
-              <p><%=p_slogam%></p>
-      
-            </div>
-      
-            <img id="signature" src="/assets/signature.svg" alt="Jonta-Sancar">
-      
+          <div class="skill">
+    
+            <img src="/assets/skills/html.svg" alt="html5">
+    
+            <h3>HTML5</h3>
           </div>
-      
-          <div id="skills">
-            
-            <div class="skill">
-      
-              <img src="/assets/skills/html.svg" alt="html5">
-      
-              <h3>HTML5</h3>
-            </div>
-      
-            <div class="skill">
-      
-              <img src="/assets/skills/css.svg" alt="css3">
-      
-              <h3>CSS3</h3>
-            </div>
-      
-            <div class="skill">
-      
-              <img src="/assets/skills/js.svg" alt="javascript">
-      
-              <h3>JS</h3>
-            </div>
-      
-            <div class="skill">
-      
-              <img src="/assets/skills/node.svg" alt="nodejs">
-      
-              <h3>NODE-JS</h3>
-            </div>
+    
+          <div class="skill">
+    
+            <img src="/assets/skills/css.svg" alt="css3">
+    
+            <h3>CSS3</h3>
           </div>
+    
+          <div class="skill">
+    
+            <img src="/assets/skills/js.svg" alt="javascript">
+    
+            <h3>JS</h3>
+          </div>
+    
+          <div class="skill">
+    
+            <img src="/assets/skills/node.svg" alt="nodejs">
+    
+            <h3>NODE-JS</h3>
+          </div>
+        </div>
+    
+      </section>
+    
+      <section id="projects">
+    
+        <h2><%=projects.title%></h2>
+          
+        <ul>
+    
+          <li href="#front">
+            <h4>Front</h4>
       
-        </section>
-      
-        <section id="projects">
-      
-          <h2><%=projects.title%></h2>
-            
-          <ul>
-      
-            <li href="#front">
-              <h4>Front</h4>
-        
-              <ul class="projects-list">
-                
-                <li class="project">
-                  <img src="/assets/projects/leading-page.png" alt="img">
-        
-                  <div>
-                    <h4><%=projects.front[0]%></h4>
-                    
-                    <br>
-        
-                    <a href="#"><%=projects.links[0]%></a>
-        
-                    <a href="https://jonta-sancar.github.io/leading-page-model/" target="_blank"><%=projects.links[1]%></a>
-                  </div>
-                </li>
-        
-                <li class="project">
-                  <img src="/assets/projects/sorte-e-os-nums.png" alt="img">
-        
-                  <div>
-                    <h4><%=projects.front[1]%></h4>
-                    
-                    <br>
-        
-                    <a href="#"><%=projects.links[0]%></a>
-        
-                    <a href="https://jonta-sancar.github.io/sorte-e-os" target="_blank"><%=projects.links[1]%></a>
-                  </div>
-                </li>
-        
-              </ul>
-            </li>
-        
-            <li href="#back">Back</li>
-        
-            <li href="#full">
+            <ul class="projects-list">
               
-              <h4>Full</h4>
-              
-              <ul class="projects-list">
-        
               <li class="project">
-                  <img src="/assets/projects/ALEATORIZE.png" alt="img">
-        
-                  <div>
-                    <h4><%=projects.full[0]%></h4>
-                    
-                    <br>
-        
-                    <a href="#"><%=projects.links[0]%></a>
-        
-                    <a href="https://sorteios.vercel.app" target="_blank"><%=projects.links[1]%></a>
-                  </div>
-                </li>
-        
-              </ul>
-            </li>
+                <img src="/assets/projects/leading-page.png" alt="img">
       
-          </ul>
+                <div>
+                  <h4><%=projects.front[0]%></h4>
+                  
+                  <br>
       
-        </section>
-      </main>
+                  <a href="#"><%=projects.links[0]%></a>
+      
+                  <a href="https://jonta-sancar.github.io/leading-page-model/" target="_blank"><%=projects.links[1]%></a>
+                </div>
+              </li>
+      
+              <li class="project">
+                <img src="/assets/projects/sorte-e-os-nums.png" alt="img">
+      
+                <div>
+                  <h4><%=projects.front[1]%></h4>
+                  
+                  <br>
+      
+                  <a href="#"><%=projects.links[0]%></a>
+      
+                  <a href="https://jonta-sancar.github.io/sorte-e-os" target="_blank"><%=projects.links[1]%></a>
+                </div>
+              </li>
+      
+            </ul>
+          </li>
+      
+          <li href="#back">Back</li>
+      
+          <li href="#full">
+            
+            <h4>Full</h4>
+            
+            <ul class="projects-list">
+      
+            <li class="project">
+                <img src="/assets/projects/ALEATORIZE.png" alt="img">
+      
+                <div>
+                  <h4><%=projects.full[0]%></h4>
+                  
+                  <br>
+      
+                  <a href="#"><%=projects.links[0]%></a>
+      
+                  <a href="https://sorteios.vercel.app" target="_blank"><%=projects.links[1]%></a>
+                </div>
+              </li>
+      
+            </ul>
+          </li>
+    
+        </ul>
+    
+      </section>
+    </main>
       
     <script src="/script/script.js"></script>
 </body>
