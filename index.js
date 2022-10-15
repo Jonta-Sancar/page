@@ -28,6 +28,21 @@ app.get('/:lang', (req, res) => {
 
 })
 
+app.get('/description/:project/:lang', (req, res) => {
+  const project = req.params.project;
+  const lang = req.params.lang;
+
+  fs.readFile(`./views/content-text/description/${lang}.json`, 'utf-8', (err, data)=>{
+    if(err) throw err;
+  
+    const data_obj = JSON.parse(data);
+    data_obj.lang = lang;
+
+    res.render('projects', data_obj);
+  })
+
+})
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log('server runnig')
