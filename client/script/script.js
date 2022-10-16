@@ -52,6 +52,10 @@ function toggleMenu(e) {
 function redirect(e){
   const lang = e.value;
 
-
-  window.location.replace(`/${lang}`);
+  const location = decodeURI(window.location.href);
+  const length = location.length;
+  const start_index = length - 3;
+  const new_location = location.slice(0, start_index)+ '/' + lang;
+  
+  window.location.replace(new_location);
 }

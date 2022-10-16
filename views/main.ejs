@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= lang %>">
 
 <head>
 
@@ -21,36 +21,8 @@
 <body>
 
 
-    <header>
-  
-        <img src="/assets/signature.svg" alt="Jonta-Sancar">
-      
-        <nav>
-
-            <select name="lang" id="lang-select"  oninput="redirect(this)">
-                <option selected disabled>lang</option>
-                <option id="pt" value="pt">Português</option>
-                <option id="en" value="en">English</option>
-            </select>
-      
-          <button id="burger" onclick="toggleMenu(this)">
-            <span id="barr"></span>
-          </button>
-      
-          <ul id="nav-ul">
-      
-            <li><a class="redirect active" href="/" target="_self" onclick="toActive(this)"><%=links[0]%></a></li>
-      
-            <li><a class="redirect" href="#projects" target="_self" onclick="toActive(this)"><%=links[1]%></a></li>
-              
-            <li><a class="redirect" href="https://www.linkedin.com/in/jonta-sancar/" target="_blank" onclick="toActive(this)"><%=links[2]%></a></li>
-      
-            <li><a class="redirect" href="https://github.com/Jonta-Sancar" target="_blank" onclick="toActive(this)"><%=links[3]%></a></li>
-      
-          </ul>
-        </nav>
-      
-    </header>
+    
+  <%- include('partials/header', { links: fixed.links }) %>
 
 
     <main>
@@ -110,7 +82,7 @@
     
         <h2><%=projects.title%></h2>
           
-        <ul>
+        <ul id="staks">
     
           <li href="#front">
             <h4>Front</h4>
@@ -121,73 +93,77 @@
               <% for (let i = 0; i < projects.front.length; i++) {%>
 
                 <li class="project">
-                  <img src="/assets/projects/leading-page.png" alt="img">
+                  <img src="<%= projects.front[i].img %>" alt="img">
         
                   <div>
                     <h4><%=projects.front[i].name%></h4>
                     
                     <br>
         
-                    <a href="<%= projects.front[i].name%>"><%=projects.links[0]%></a>
+                    <a href="<%= projects.front[i].description %>/<%= lang %>"><%=projects.links[0]%></a>
         
-                    <a href="<%=projects.front[i].name%>" target="_blank"><%=projects.links[1]%></a>
+                    <a href="<%=projects.front[i].url %>" target="_blank"><%=projects.links[1]%></a>
                   </div>
                 </li>
 
               <% } %>
 
-              <li class="project">
-                <img src="/assets/projects/leading-page.png" alt="img">
-      
-                <div>
-                  <h4><%=projects.front[0]%></h4>
-                  
-                  <br>
-      
-                  <a href="#"><%=projects.links[0]%></a>
-      
-                  <a href="https://jonta-sancar.github.io/leading-page-model/" target="_blank"><%=projects.links[1]%></a>
-                </div>
-              </li>
-      
-              <li class="project">
-                <img src="/assets/projects/sorte-e-os-nums.png" alt="img">
-      
-                <div>
-                  <h4><%=projects.front[1]%></h4>
-                  
-                  <br>
-      
-                  <a href="#"><%=projects.links[0]%></a>
-      
-                  <a href="https://jonta-sancar.github.io/sorte-e-os" target="_blank"><%=projects.links[1]%></a>
-                </div>
-              </li>
-      
             </ul>
+
           </li>
       
-          <li href="#back">Back</li>
+          <li href="#back">
+
+            <h4>Back</h4>
+
+            
+            <ul class="projects-list">
+              
+              <% for (let i = 0; i < projects.back.length; i++) {%>
+
+                <li class="project">
+                  <img src="<%= projects.back[i].img %>" alt="img">
+        
+                  <div>
+                    <h4><%=projects.back[i].name%></h4>
+                    
+                    <br>
+        
+                    <a href="<%= projects.back[i].description %>/<%= lang %>"><%=projects.links[0]%></a>
+        
+                    <a href="<%=projects.back[i].url %>" target="_blank"><%=projects.links[1]%></a>
+                  </div>
+                </li>
+
+              <% } %>
+
+            </ul>
+
+          </li>
       
           <li href="#full">
             
             <h4>Full</h4>
             
             <ul class="projects-list">
-      
-            <li class="project">
-                <img src="/assets/projects/ALEATORIZE.png" alt="img">
-      
-                <div>
-                  <h4><%=projects.full[0]%></h4>
-                  
-                  <br>
-      
-                  <a href="#"><%=projects.links[0]%></a>
-      
-                  <a href="https://sorteios.vercel.app" target="_blank"><%=projects.links[1]%></a>
-                </div>
-              </li>
+              
+              <% for (let i = 0; i < projects.full.length; i++) {%>
+
+                <li class="project">
+                  <img src="<%= projects.full[i].img %>" alt="img">
+        
+                  <div>
+                    <h4><%=projects.full[i].name%></h4>
+                    
+                    <br>
+        
+                    <a href="<%= projects.full[i].description %>/<%= lang %>"><%=projects.links[0]%></a>
+        
+                    <a href="<%=projects.full[i].url %>" target="_blank"><%=projects.links[1]%></a>
+                  </div>
+                </li>
+
+              <% } %>
       
             </ul>
           </li>

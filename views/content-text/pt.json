@@ -12,25 +12,38 @@
       "ou só "
   ],
   "p_slogam": "Desenvolvedor web full stack, brasileiro, utilizando: no front - html, css, javascript; no back - node (em breve novo item).",
+
   "projects":{
       "title":"Projetos",
       "links":[
           "descrição",
           "acessar"
       ],
+
       "front":[
           {
+            "img":"/assets/projects/leading-page.png",
             "name":"Página principal / de captura",
-            "href":[
-                "/description/leading-page-model",
-                "https://jonta-sancar.github.io/leading-page-model"
-            ]
+            "description":"/leading-page-model",
+            "url":"https://jonta-sancar.github.io/leading-page-model/"
           },
-          "Sortê e os - num"
+          {
+            "img":"/assets/projects/sorte-e-os-nums.png",
+            "name":"Sortê e os - num",
+            "description":"/sorte-e-os-nums",
+            "url":"https://jonta-sancar.github.io/sorte-e-os/"
+          }
       ],
+
       "back":[],
+
       "full":[
-          "SORTÊ E OS"
-      ]
-  }
+        {
+          "img":"/assets/projects/ALEATORIZE.png",
+          "name":"SORTÊ E OS",
+          "description":"/sorte-e-os",
+          "url":"https://sorteios.vercel.app"
+        }
+    ]    
+}
 }

@@ -1,0 +1,13 @@
+{
+  "title":"Descrição - Sortê e os - nums",
+  "img": "/assets/projects/sorte-e-os-nums.png",
+  "access":{
+    "inner": "acessar",
+    "href": "https://jonta-sancar.github.io/sorte-e-os/"
+  },
+
+  "description":[
+    "Esta página visa realizar sorteios numéricos baseado no intervalo indicado. Isto é, o número indicado é tido como o número máximo, enquanto o número mínimo, por padrão é 1.",
+    "Por exemplo, caso o número indicado seja 10, o sistema considerará o intervalo numérico de 1 a 10, o que significa que a página retornará um número aleatório dento dos possíveis (neste caso, os números possíveis são: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)."
+  ]
+}

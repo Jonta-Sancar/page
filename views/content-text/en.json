@@ -1,5 +1,5 @@
 {
-  "title": "Jonta Sancar - Brazillian web developer",
+  "title": "Jonta Sancar - Brazilian web developer",
 
   "links":[
       "Home",
@@ -8,23 +8,42 @@
       "Github"
   ],
   "h1":[
-      "Hello, you can call me ",
+      "Hello, can you call me ",
       "or just "
   ],
-  "p_slogam": "Web developer full stack, Brazillian, I use: front - html, css, javascript; back - node (soon new item).",
+  "p_slogam": "Full stack web developer, brazillian, I use: in the front - html, css, javascript; in the back - node (coming soon new item).",
+
   "projects":{
       "title":"Projects",
       "links":[
           "description",
           "access"
       ],
+
       "front":[
-          "Leading page",
-          "Sweepstake page - numbers"
+          {
+            "img":"/assets/projects/leading-page.png",
+            "name":"Leading page",
+            "description":"/description/leading-page-model",
+            "url":"https://jonta-sancar.github.io/leading-page-model/"
+          },
+          {
+            "img":"/assets/projects/sorte-e-os-nums.png",
+            "name":"Sweepstake page - numbers",
+            "description":"/description/sorte-e-os-nums",
+            "url":"https://jonta-sancar.github.io/sorte-e-os-nums/"
+          }
       ],
+
       "back":[],
+
       "full":[
-          "full-stack Sweepstake page"
-      ]
+        {
+          "img":"/assets/projects/ALEATORIZE.png",
+          "name":"Sweepstake page - full",
+          "description":"/description/sorte-e-os",
+          "url":"https://sorteios.vercel.app"
+        }
+    ]    
   }
 }

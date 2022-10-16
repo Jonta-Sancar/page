@@ -1,0 +1,14 @@
+{
+  "title":"Descrição - SORTÊ E OS",
+  "img": "/assets/projects/ALEATORIZE.png",
+  "access":{
+    "inner": "acessar",
+    "href": "https://sorteios.vercel.app"
+  },
+
+  "description":[
+    "Esta é uma solução mais completa, não só para sorteios, mas também para combinações aleatórias. Nesta página você pode:",
+    "sortear; números, nomes, letras, cartões.",
+    "combinar; nomes, listas."
+  ]
+}

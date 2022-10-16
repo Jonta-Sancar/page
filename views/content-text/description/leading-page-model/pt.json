@@ -1,0 +1,13 @@
+{
+  "title":"Descrição - Página de captura",
+  "img": "/assets/projects/leading-page.png",
+  "access":{
+    "inner": "acessar",
+    "href": "https://jonta-sancar.github.io/leading-page-model/"
+  },
+
+  "description":[
+    "Esta é uma página desenvolvida para demonstrar habilidade na criação de páginas de captura, através de ferramentas client side (front end), sendo elas: HTML, CSS e JavaScript.",
+    "Ao acessar a página você poderá observar a resposta desta ao tamanho da janela (responsividade), bem como demais funcionalidades de usabilidade."
+  ]
+}

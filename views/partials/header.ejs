@@ -1,0 +1,30 @@
+<header>
+  
+  <img src="/assets/signature.svg" alt="Jonta-Sancar">
+
+  <nav>
+
+      <select name="lang" id="lang-select"  oninput="redirect(this)">
+          <option selected disabled>lang</option>
+          <option id="pt" value="pt">Português</option>
+          <option id="en" value="en">English</option>
+      </select>
+
+    <button id="burger" onclick="toggleMenu(this)">
+      <span id="barr"></span>
+    </button>
+
+    <ul id="nav-ul">
+
+      <li><a class="redirect active" href="/" target="_self" onclick="toActive(this)"><%= links[0] %></a></li>
+
+      <li><a class="redirect" href="#projects" target="_self" onclick="toActive(this)"><%= links[1] %></a></li>
+        
+      <li><a class="redirect" href="https://www.linkedin.com/in/jonta-sancar/" target="_blank" onclick="toActive(this)"><%= links[2] %></a></li>
+
+      <li><a class="redirect" href="https://github.com/Jonta-Sancar" target="_blank" onclick="toActive(this)"><%= links[3] %></a></li>
+
+    </ul>
+  </nav>
+
+</header>
