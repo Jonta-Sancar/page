@@ -19,7 +19,13 @@
           "acessar"
       ],
       "front":[
-          "Página principal / de captura",
+          {
+            "name":"Página principal / de captura",
+            "href":[
+                "/description/leading-page-model",
+                "https://jonta-sancar.github.io/leading-page-model"
+            ]
+          },
           "Sortê e os - num"
       ],
       "back":[],

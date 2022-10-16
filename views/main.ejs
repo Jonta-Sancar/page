@@ -114,9 +114,28 @@
     
           <li href="#front">
             <h4>Front</h4>
-      
+
+            
             <ul class="projects-list">
               
+              <% for (let i = 0; i < projects.front.length; i++) {%>
+
+                <li class="project">
+                  <img src="/assets/projects/leading-page.png" alt="img">
+        
+                  <div>
+                    <h4><%=projects.front[i].name%></h4>
+                    
+                    <br>
+        
+                    <a href="<%= projects.front[i].name%>"><%=projects.links[0]%></a>
+        
+                    <a href="<%=projects.front[i].name%>" target="_blank"><%=projects.links[1]%></a>
+                  </div>
+                </li>
+
+              <% } %>
+
               <li class="project">
                 <img src="/assets/projects/leading-page.png" alt="img">
       
