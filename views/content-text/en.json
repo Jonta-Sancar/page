@@ -24,13 +24,13 @@
           {
             "img":"/assets/projects/leading-page.png",
             "name":"Leading page",
-            "description":"/description/leading-page-model",
+            "description":"/leading-page-model",
             "url":"https://jonta-sancar.github.io/leading-page-model/"
           },
           {
             "img":"/assets/projects/sorte-e-os-nums.png",
             "name":"Sweepstake page - numbers",
-            "description":"/description/sorte-e-os-nums",
+            "description":"/sorte-e-os-nums",
             "url":"https://jonta-sancar.github.io/sorte-e-os-nums/"
           }
       ],
@@ -41,7 +41,7 @@
         {
           "img":"/assets/projects/ALEATORIZE.png",
           "name":"Sweepstake page - full",
-          "description":"/description/sorte-e-os",
+          "description":"/sorte-e-os",
           "url":"https://sorteios.vercel.app"
         }
     ]    

@@ -1,0 +1,14 @@
+{
+  "title":"description - sweepstakes-numbers",
+  "img": "/assets/projects/sorte-e-os-nums.png",
+  "access":{
+    "inner": "access",
+    "href": "https://jonta-sancar.github.io/sorte-e-os/"
+  },
+
+  "description":[
+    "On this page you indicate a max number of the a number interval. That is, if you input 100, the sweepstake get the number interval from 1 to 100 and the response will be between 1 and 100.",
+
+    "For example, case the indicate number be 10, the system make the range 1 to 10. That is, the page show the response between the interval: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+  ]
+}
