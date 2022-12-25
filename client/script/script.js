@@ -6,12 +6,10 @@ addEventListener('scroll', () => {
   if (scrollY >= prev) {
     if (!headerClass.contains('headerHide')) {
       headerClass.add('headerHide');
-      header.style.top = '-100px';
     }
   }
   else if (headerClass.contains('headerHide')) {
     headerClass.remove('headerHide');
-    header.style.top = `0px`;
   }
   prev = scrollY;
 })

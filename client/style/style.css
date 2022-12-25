@@ -8,34 +8,51 @@
 body{
     text-align: center;
 
-    background-image: linear-gradient(-65deg, #0d173f, #213da1);
-    background-repeat: no-repeat;
+    background-color: #0d173f;
 
     color: #F5BB1B;
     font-family: Courier, monospace;
-    text-shadow: 0 1px 5px #000a;
 }
 
-header{
-    background: linear-gradient(to left bottom, #213da1, #000E42);
-    padding: 10px 15px;
+main.container{
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header{ 
+    background: #213da1;
+    padding: 5px 10px;
+
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+    z-index: 10;
+
+    transition: .2s;
+
+    box-shadow: 0px 5px 10px #0003;
+}
+header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    position: sticky;
-    z-index: 1;
-    top: 0;
-
-    box-shadow: 0px 5px 10px #0008;
+}
+.headerHide{
+    padding: 0;
+    height: 0px;
+    overflow: hidden;
 }
 
 #lang-select{
-    background-color: #fff;
+    padding: 5px;
+    background-color: #213da1;
+    color: #f5bb1b94;
     margin-right: 20px;
     border: 1px solid;
-
-    width: 50px;
+    
+    font-weight: bold;
 }
 
 header img{
@@ -72,8 +89,8 @@ nav{
     flex-direction: column;
     justify-content: center;
 
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
     cursor: pointer;
 }
@@ -82,7 +99,7 @@ nav{
     position: relative;
     background-color: #F5BB1B;
     width: 100%;
-    height: 5px;
+    height: 3px;
 
     transition: .3s;
 }
@@ -183,11 +200,17 @@ h1 strong{
 }
 
 #staks{
+    padding: 15px;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+.dev-type{
+    padding-top: 30px;
+    width: 100%;
 }
 
 #projects{
@@ -220,7 +243,7 @@ h1 strong{
     padding: 10px;
     border-radius: 5px;
 
-    width: 450px;
+    width: 40%;
 }
 .project img{
     width: 100%;
@@ -242,6 +265,12 @@ h1 strong{
 
 
 @media (max-width: 600px) {
+    header{
+        height: 70px;
+    }
+    header img{
+        width: 50px;
+    }
     #nav-ul{
         background-image: linear-gradient(to bottom,#213da1, #000E42);
 
@@ -268,5 +297,17 @@ h1 strong{
     #slogam h1{
         text-indent: 0%;
         text-align: center;
+    }
+
+    #home{
+        padding-top: 30px;
+    }
+
+    .project{
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+    
+        width: 100%;
     }
 }
