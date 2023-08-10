@@ -1,5 +1,5 @@
 {
-  "name": "page",
+  "name": "Jonta Sancar - My Page",
   "version": "1.0.0",
   "description": "My redirect page.",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Jonta-Sancar/page.git"
   },
-  "author": "",
+  "author": "Jonta Sancar (Jonathas Carneiro)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Jonta-Sancar/page/issues"
