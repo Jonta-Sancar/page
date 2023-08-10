@@ -2,4 +2,4 @@
 
 My redirect page.
 
-access by clicking <a href="https://jonta-sancar.vercel.app" target="_blank">here</a>.
+access by clicking [here](https://jonta-sancar.vercel.app).
