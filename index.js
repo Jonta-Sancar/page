@@ -8,10 +8,10 @@ app.get('/', (req, res)=>{
   res.redirect('/pt');
 })
 
-app.get('/pt', express.static(path.join(__dirname, './client/pages/pt')));
-app.get('/en', express.static(path.join(__dirname, './client/pages/en')));
+app.use('/pt', express.static(path.join(__dirname, './client/pages/pt')));
+app.use('/en', express.static(path.join(__dirname, './client/pages/en')));
 
-app.get('/assets', express.static(path.join(__dirname, './client/assets')));
+app.use('/assets', express.static(path.join(__dirname, './client/assets')));
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
