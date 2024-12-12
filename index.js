@@ -9,6 +9,7 @@ app.get('/', (req, res)=>{
 })
 
 app.use('/pt', express.static(path.join(__dirname, './client/pages/pt')));
+app.use('/video', express.static(path.join(__dirname, './client/pages/pt/video.html')));
 app.use('/en', express.static(path.join(__dirname, './client/pages/en')));
 
 app.use('/assets', express.static(path.join(__dirname, './client/assets')));
